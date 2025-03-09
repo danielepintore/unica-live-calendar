@@ -91,8 +91,7 @@ class EasyStaff():
                             event.add('dtstart', start_date)
                             event.add('dtend', end_date)
                             event['location'] = vText(lesson.get("Aula", ""))
-                            event["uid"] = f"{event_name.replace(
-                                ' ', '')}-{start_date.timestamp()}@unicacalendar"  # ID unico
+                            event["uid"] = f"{event_name.replace(' ', '')}-{start_date.timestamp()}@unicacalendar"  # ID unico
                             calendar.add_component(event)
                 else:
                     raise ValueError(
