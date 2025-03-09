@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Unica Easystaff live Calendar</title>
+		<link href="css/style.css" rel="stylesheet">
+		<script src="main.js"></script>
+		<style>
+			body {
+				display: grid;
+				max-width: 80%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			#periods {
+				margin-bottom: 1rem;
+			}
+			#gen_btn {
+				margin-bottom: 1rem;
+			}
+		</style>
+	</head>
+	<body onload="fetchData();">
+	<h1>Calendari live delle lezioni Unica</h1>
+	<h3>Seleziona la facoltà: </h3>
+	<select id="faculties">
+	</select>
+	<h3>Seleziona il tipo di laurea: </h3>
+	<select id="degree_type">
+	</select>
+	<h3>Seleziona il corso di studio: </h3>
+	<select id="course">
+	</select>
+	<h3>Seleziona il periodo: </h3>
+	<select id="periods">
+	</select>
+	<div id="lesson-grid">
+		<input type="checkbox" id="vehicle1" value="Bike">
+		<label for="vehicle1"> I have a bike</label>
+	</div>
+	<input type="text" id="calendar_url" value="Genera l'url del calendario per poterlo vedere" readonly>
+	<!-- Button to trigger the copy action -->
+<button onclick="copyToClipboard()">Copia URL calendario</button>
+
+<script>
+    function copyToClipboard() {
+        // Get the input element
+        var copyText = document.getElementById("calendar_url");
+
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text to the clipboard
+        document.execCommand("copy");
+
+        // Alert the user that the text was copied
+        alert("Copiato l'url del calendario");
+    }
+</script>
+	</body>
+</html>
