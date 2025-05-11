@@ -41,8 +41,7 @@ function populateLessonTable() {
 			lesson_grid = document.getElementById("lesson-grid")
 			lesson_grid.innerHTML = "";
 			for (let index = 0; index < value.length; index++) {
-				//<input type="checkbox" id="vehicle1" value="Bike">
-				//<label for="vehicle1"> I have a bike</label>
+				var lesson_div = document.createElement("div");
 				var input = document.createElement("input");
 				var label = document.createElement("label");
 				input.type = "checkbox"
@@ -51,8 +50,10 @@ function populateLessonTable() {
 				input.id = value[index]["id"] + value[index]["file"]
 				label.htmlFor = input.id
 				label.textContent = value[index]["nome"] + " | " + value[index]["terza_riga"] + " | " + value[index]["anno"] + " anno" + " | " + value[index]["docente"] + " | " + value[index]["crediti"] + " CFU"
-				lesson_grid.append(input)
-				lesson_grid.append(label)
+				lesson_div.append(input)
+				lesson_div.append(label)
+				lesson_div.classList.add("lesson_div")
+				lesson_grid.append(lesson_div)
 				lesson_grid.append(document.createElement("br"))
 			}
 			document.querySelectorAll('[name="selectedLessons"]').forEach(checkbox => {

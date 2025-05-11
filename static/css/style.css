@@ -1,0 +1,87 @@
+body {
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #3F3F6A;
+	color: white;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding: 2rem;
+	max-width: 40%;
+}
+
+@media (max-width: 1080px) {
+	body {
+		max-width: 80%;
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		max-width: 80%;
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		max-width: 80%;
+	}
+}
+
+select {
+	width: 100%;
+	background-color: transparent;
+	color: white;
+	border: .2rem solid #ffffff;
+	border-radius: .5rem;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+	margin: .5rem;
+}
+
+.title {
+	text-align: center;
+}
+
+.select-field {
+	display: grid;
+	align-items: center;
+	background-color: #200333;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+}
+
+.lesson_div {
+	background-color: #200333;
+	padding-bottom: 1rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+}
+
+.copy-div {
+	width: 100%;
+	display: grid;
+}
+
+#copy-btn {
+	color: white;
+	background-color: #200333;
+	padding-bottom: 1rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+}
+
+#calendar_url {
+	color: white;
+	background-color: #200333;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+}
+
+#gen_btn {
+	margin-bottom: 1rem;
+}
