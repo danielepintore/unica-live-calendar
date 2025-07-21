@@ -93,9 +93,10 @@ function fetchData() {
 
 function populateFaculties(data) {
 	// Populate faculties select
+    const handler = () => populateDegreeType(data[faculties_select.selectedIndex])
 	faculties_select = document.getElementById("faculties");
 	faculties_select.innerHTML = "";
-	faculties_select.addEventListener("change", function() { populateDegreeType(data[faculties_select.selectedIndex]) });
+	faculties_select.onchange = handler;
 	for (let index = 0; index < data.length; index++) {
 		var opt = document.createElement("option");
 		opt.value = index
@@ -106,10 +107,11 @@ function populateFaculties(data) {
 }
 
 function populateDegreeType(data) {
+    const handler = () => populateCourses(data[degree_select.selectedIndex]["elenco_cdl"])
 	data = data["elenco_lauree"]
 	degree_select = document.getElementById("degree_type");
 	degree_select.innerHTML = "";
-	degree_select.addEventListener("change", function() { populateCourses(data[degree_select.selectedIndex]["elenco_cdl"]) });
+	degree_select.onchange = handler;
 	for (let index = 0; index < data.length; index++) {
 		var opt = document.createElement("option");
 		opt.value = index
@@ -120,8 +122,9 @@ function populateDegreeType(data) {
 }
 
 function populateCourses(data) {
+    const handler = () => populatePeriods(data[courses_select.selectedIndex]["pub_periodi"])
 	courses_select = document.getElementById("course");
-	courses_select.addEventListener("change", function() { populatePeriods(data[courses_select.selectedIndex]["pub_periodi"]) });
+	courses_select.onchange = handler;
 	courses_select.innerHTML = "";
 	for (let index = 0; index < data.length; index++) {
 		var opt = document.createElement("option");
