@@ -1,7 +1,7 @@
 body {
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #3F3F6A;
+	background-color: #052e16;
 	color: white;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	padding: 2rem;
@@ -35,6 +35,11 @@ select {
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Color for options inside the select */
+select *{
+  color: black;
+}
+
 h3 {
 	margin: .5rem;
 }
@@ -46,7 +51,7 @@ h3 {
 .select-field {
 	display: grid;
 	align-items: center;
-	background-color: #200333;
+	background-color: #166534;
 	margin-bottom: 1rem;
 	padding-bottom: 1rem;
 	padding: 0.5rem;
@@ -54,7 +59,7 @@ h3 {
 }
 
 .lesson_div {
-	background-color: #200333;
+	background-color: #166534;
 	padding-bottom: 1rem;
 	padding: 0.5rem;
 	border-radius: 1rem;
@@ -67,18 +72,21 @@ h3 {
 
 #copy-btn {
 	color: white;
-	background-color: #200333;
+	background-color: #166534;
 	padding-bottom: 1rem;
 	padding: 0.5rem;
+    border: 0.1rem solid #ffffff;
 	border-radius: 1rem;
+    cursor: pointer;
 }
 
 #calendar_url {
 	color: white;
-	background-color: #200333;
+	background-color: #166534;
 	margin-bottom: 1rem;
 	padding-bottom: 1rem;
 	padding: 0.5rem;
+    border: none;
 	border-radius: 1rem;
 }
 
