@@ -29,6 +29,11 @@ body {
 	}
 }
 
+input[type=checkbox].hidden{
+  opacity: 0;
+  display: none;
+}
+
 select {
 	width: 100%;
 	background-color: transparent;
@@ -61,10 +66,21 @@ h3 {
 }
 
 .lesson_div {
+    transition: background-color 0.3s ease;
 	background-color: #166534;
 	padding-bottom: 1rem;
 	padding: 0.5rem;
 	border-radius: 1rem;
+    cursor: pointer;
+}
+
+.lesson_div label {
+    cursor: pointer;
+}
+
+.lesson_div.selected {
+    transition: background-color 0.3s ease;
+    background-color: #0f4c3b;
 }
 
 .copy-div {
